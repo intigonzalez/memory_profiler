@@ -1,0 +1,103 @@
+\lstset{
+  aboveskip=5mm,
+  belowskip=5mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle=\color{black}\scriptsize,
+  numbers=none,
+  numberstyle=\color{gray}\scriptsize,
+  keywordstyle=\color{black}\scriptsize\bfseries,
+  commentstyle=\color{dkgreen}\scriptsize,
+  stringstyle=\color{purple}\scriptsize,
+  identifierstyle=\color{dkgray}\scriptsize,
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4,
+  captionpos=b,
+}
+
+\lstdefinelanguage{AlgLang}
+{
+literate={aaa}{bbb}3,
+morekeywords={input, foreach, action, if, return, routine, values},
+morekeywords={instances_for, have_id},
+sensitive=true,
+%frame=tblr,
+morecomment=[l]{//},
+morecomment=[s]{/*}{*/},
+morestring=[b]",
+basicstyle=\color{black}\large,
+keywordstyle=\color{black}\large\bfseries,
+commentstyle=\color{dkgreen}\large,
+stringstyle=\color{purple}\large,
+identifierstyle=\color{dkgray}\large,
+}
+
+\lstdefinelanguage{DSL}
+{
+literate={aaa}{bbb}3,
+morekeywords={data, set_type, void, int, bool, Objects, THIS, is, ENTITY},
+morekeywords={instances_for, have_names},
+sensitive=true,
+morecomment=[l]{//},
+morecomment=[s]{/*}{*/},
+morestring=[b]",
+}
+
+\lstdefinelanguage{OCL1}
+{
+literate={aaa}{bbb}3,
+morekeywords={context,inv,and,or,self, if, not, else, endif, then},
+sensitive=true,
+frame=L,
+morecomment=[l]{//},
+morecomment=[s]{/*}{*/},
+morestring=[b]",
+xleftmargin=1\parindent,
+}
+
+\lstdefinelanguage{DSL2}
+{
+literate={aaa}{bbb}3,
+frame=L, % tblr
+%numbersep=2pt,
+numbers=left,
+numberstyle=\color{black}\scriptsize,
+morekeywords={void, int, bool, in, is, or, and, struct, tableOf, ret},
+morekeywords={membership, initialValues, updates, structure, initialObjects, create, using, constructor, foreach},
+sensitive=true,
+morecomment=[l]{//},
+morecomment=[s]{/*}{*/},
+morestring=[b]",
+ndkeywords={false, true, this, referrer, threads, this_structure},
+ndkeywordstyle=\color{blue}\bfseries,
+xleftmargin=2\parindent
+}
+
+\lstdefinelanguage{OQL}
+{
+literate={aaa}{bbb}3,
+numbers=left,
+numberstyle=\color{black}\scriptsize,
+morekeywords={SELECT, FROM, WHERE, UNION, AS, DISTINCT, ALL, GROUP, BY},
+sensitive=true,
+frame=tblr,
+morecomment=[l]{//},
+morecomment=[s]{/*}{*/},
+morestring=[b]",
+xleftmargin=1\parindent
+}
+
+\lstdefinelanguage{CYPHER}
+{
+literate={aaa}{bbb}3,
+morekeywords={MATCH, RETURN, WITH, sum},
+sensitive=true,
+frame=tblr,
+morecomment=[l]{//},
+morecomment=[s]{/*}{*/},
+morestring=[b]",
+numbers=left,
+numberstyle=\color{black}\scriptsize,
+xleftmargin=1\parindent
+}

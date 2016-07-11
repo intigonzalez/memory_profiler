@@ -1,0 +1,47 @@
+\selectlanguage{english}
+\chapter{Building Efficient Domain-Specific Memory Profilers}
+\label{chp:dsl-memory}
+\markboth{Building Efficient Domain-Specific Memory Profilers}{Chapter6}
+
+\coolphrase{
+\textit{Jack (V.O.)} -- Babies don't sleep this well.\hspace*{4.9cm} \\
+\vspace{1 mm}
+
+\textbf{(Jack's bedroom -- night -- Jack lies sound asleep)}\\
+\vspace{1 mm}
+
+\textit{Jack (V.O.)} -- I became addicted [\dots]\hspace*{5.7cm} \\
+\vspace{1 mm}
+
+\textit{Jack (V.O.)} -- If I didn't say anything, people assumed the worst.  They  \\
+                        cried harder. I cried harder [\dots]\hspace*{4.1cm} \\
+\vspace{1 mm}
+                  
+\textit{Jack (V.O.)} -- [\dots] the guys with cancer [\dots] ``Free and Clear'',\hspace*{1.3cm} \\
+                        my  blood parasites group Thursdays [\dots]\hspace*{2.5cm} \\
+                        ``Seize The Day'', my tuberculosis Friday night. \hspace*{1.5cm}
+}{Fight Club}
+
+\input{chapter6/languages_for_listings}
+
+\input{chapter6/introduction}
+
+\input{chapter6/approach}
+
+\input{chapter6/implementation}
+
+\input{chapter6/expressiveness}
+
+\input{chapter6/evaluation}
+
+\section{ Conclusions } \label{sec:conclusions}
+
+In this chapter, we propose a Domain Specific Language for expressing the mapping between abstractions and runtime data structure to collect information about the memory heap in production.
+This language provides an abstraction that is useful to reason about the heap and is, at the same time, easy to translate into a set of low-level routines to efficiently collect the desired information.
+In our opinion, this approach is a step forward in the creation of resource-aware software systems for two reasons. 
+First, it reduces the complexity of defining customized queries; hence, developers and operators are able to use this feature to solve new problems without the need of high expertise on runtime internals.
+Second, such customized queries can be used in a production environment since they have a limited impact on the system's performance.
+
+The approach proposed in this chapter contributes to answer two research questions presented in the introduction of this thesis (see Section \ref{sec:intro-challenges}).
+In particular, it answers \textit{\ref{rq:rq1}} (\textit{How can we provide portable and efficient support for resource consumption monitoring?}) and \textit{\ref{rq:rq4}} (\textit{How can we ease the definition and implementation of monitoring tools for new software abstractions?}) by defining a metalanguage to describe the behavior of customized memory profilers.
+These profilers are useful to efficiently calculate at runtime how components and other domain-specific abstractions consume resources. 
